@@ -8,18 +8,23 @@ const getNthElement = (index, array) => {
 
 const arrayToCSVString = array => {
   // your code here
+  return array.join(',');
 };
 
 const csvStringToArray = string => {
   // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
   // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
   // your code here
+  const newArray = [...array, element]; // spread operator
+  return newArray;
 };
 
 const removeNthElement = (index, array) => {
