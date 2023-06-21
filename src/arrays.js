@@ -29,10 +29,14 @@ const addToArray2 = (element, array) => {
 
 const removeNthElement = (index, array) => {
   // your code here
+  array.splice(index, 1);
+  return array;
 };
 
 const numbersToStrings = numbers => {
   // your code here
+  numbers.toString();
+  return numbers.map(num => num.toString());
 };
 
 const uppercaseWordsInArray = strings => {
