@@ -4,6 +4,7 @@ const getNthElement = (index, array) => {
     return array[index];
   }
   return array[index - array.length];
+  // return array.slice(index, 0); this fails but look into it later
 };
 
 const arrayToCSVString = array => {
@@ -41,34 +42,50 @@ const numbersToStrings = numbers => {
 
 const uppercaseWordsInArray = strings => {
   // your code here
+  return strings.map(word => word.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
   // your code here
+  return strings.map(word =>
+    word
+      .split('')
+      .reverse()
+      .join('')
+  );
 };
 
 const onlyEven = numbers => {
   // your code here
+  return numbers.filter(number => number % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
   // your code here
+  // return array.slice(index, 0);
+  return [...array.slice(0, index), ...array.slice(index + 1)];
 };
 
 const elementsStartingWithAVowel = strings => {
   // your code here
+  return strings.filter(element => /^[aeiou]/i.test(element));
 };
 
 const removeSpaces = string => {
   // your code here
+  // return string.map(element => element.replace(/\s/g, '')); fails
+  // return string.replace(/\s/g, ''); passes
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
   // your code here
+  return numbers.reduce((acc, num) => acc + num, 0);
 };
 
 const sortByLastLetter = strings => {
   // your code here
+  return strings.reverse().sort();
 };
 
 module.exports = {

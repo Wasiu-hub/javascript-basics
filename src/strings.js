@@ -1,6 +1,8 @@
 function sayHello(string) {
   // your code here
   return `Hello, ${string}!`;
+
+  // return 'Hello, ' + string + '!';
 }
 
 function uppercase(string) {
@@ -25,11 +27,12 @@ function firstCharacter(string) {
 
 function firstCharacters(string, n) {
   // your code here
-  let result = '';
-  for (let i = 0; i < n; i++) {
-    result += string[i];
-  }
-  return result;
+  // let result = '';
+  // for (let i = 0; i < n; i++) {
+  //   result += string[i];
+  // }
+  // return result;
+  return string.slice(0, n);
 }
 
 module.exports = {
