@@ -68,7 +68,8 @@ const removeNthElement2 = (index, array) => {
 
 const elementsStartingWithAVowel = strings => {
   // your code here
-  return strings.filter(element => /^[aeiou]/i.test(element));
+  // return strings.filter(element => /^[aeiou]/i.test(element));
+  return strings.filter(e => e.match(/^[aeiou]/gi));
 };
 
 const removeSpaces = string => {
@@ -85,7 +86,25 @@ const sumNumbers = numbers => {
 
 const sortByLastLetter = strings => {
   // your code here
-  return strings.reverse().sort();
+  // return strings.reverse().sort();
+  // const newWords = strings.map(word =>
+  //   word
+  //     .split('')
+  //     .reverse()
+  //     .join('')
+  // );
+  // return newWords.sort().map(sortedWord => sortedWord.split(' '));
+
+  const reverseString = item =>
+    item
+      .split('')
+      .reverse()
+      .join('');
+
+  return strings
+    .map(reverseString)
+    .sort()
+    .map(reverseString);
 };
 
 module.exports = {
