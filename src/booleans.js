@@ -74,7 +74,10 @@ function isEven(a) {
 
 function isSquare(a) {
   // your code here
-  if (a === 0 || Math.sqrt(a) % 2 !== 0) {
+
+  // if (a === 0 || Math.sqrt(a) % 2 !== 0)
+  // typeof Math.sqrt(a) === 'number' || a >= 0
+  if (Math.sqrt(a) % 1 === 0) {
     return true;
   }
   return false;
